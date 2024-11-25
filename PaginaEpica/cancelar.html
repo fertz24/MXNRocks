@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MXNRocks! | Cancelar pedido</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@0;1&display=swap');
+        </style>
+
+         <link
+         href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+         rel="stylesheet"
+         />
+
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <header class="encab">
+        <nav>
+                <div class="navLogo">
+                    <a href="index.html"> <img src="imagenes/logoTacos.png" alt="Logo del restaurante" class="logo"> </a>
+                </div>
+            <ul class="navlinks" id="navL">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#menu">Menú</a></li>
+                <li><a href="index.html#contactanos">Contáctanos</a></li>
+                <li><a href="index.html#pregunta">Preguntas frecuentes</a></li>
+                <li><a href="#reserva">¡Reserva ya!</a></li>
+                <li><a href="pedido.html">Pedidos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>¡Cancela tu pedido aquí!</h1>
+    <form action="proceso_cancelar.php" method="post" class="cancel">
+        <label for="folio">Ingresa el folio del pedido:</label>
+        <input type="text" id="folio" name="folio" placeholder="P450" required>
+        <input type="submit" value="Cancelar pedido">
+    </form>
+
+    <footer class="foot" id="contactanos">
+        <div class="sec-f foot-caja">
+            <div class="foot-txt">
+              <h3 class="fw-bold">Contáctanos</h3>
+            </div>
+            <div class="foot-cont">
+                <p>¡Bienvenido(a) a MXN Rocks! Somos un restaurante de tacos gourmet en Mexicali, B.C. Establecidos en 2024.
+                    Creemos que los tacos es algo que nos representa como mexicanos y es por eso que le quisimos dar un toque
+                    diferente a los que estamos acostumbrados, <br>Esperemos que la comida sea de tu agrado y nos a compañes en nuestras instalaciones
+                    siempre serás bienvenido(a). <br>
+                    Gracias por visitar esta página, fue creada con bastante esfuerzo. <br>
+                </p>
+                <div>
+                    <ul class="foot-link">
+                        <li>
+                            <span><i class="ri-map-pin-2-fill"></i></span>
+                            Avenida Tecnológico s/n, Colonia Elías Calles, 21376 Mexicali, B.C.
+                        </li>
+                        <li>
+                            <span><i class="ri-time-line"></i></span>
+                            Lunes a Viernes de 12:00pm a 11:00pm / Sábado y Domingo cerrado
+                        </li>
+                        <li>
+                            <span><i class="ri-phone-fill"></i></span>
+                            (686)-123-456
+                        </li>
+                    </ul>
+                    <div class="foot-redes">
+                        <a href="https://www.facebook.com/?locale=es_LA"><i class="ri-facebook-circle-fill"></i></a>
+                        <a href="https://www.instagram.com/?hl=es"><i class="ri-instagram-fill"></i></a>
+                        <a href="https://x.com/?lang=es"><i class="ri-twitter-x-fill"></i></a>
+                        <a href="https://web.whatsapp.com/"><i class="ri-whatsapp-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot-ult">
+            Copyright &copy 2024 MXN Rocks!. Todos los derechos reservados.
+            <p id="visitas"></p>
+        </div>
+    </footer>
+
+    <script src="visitas.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

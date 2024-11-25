@@ -1,0 +1,167 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.navlinks a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navLogo {
+    position: absolute;
+    top: -30px;
+    left: 90px;
+    z-index: 2;
+}
+
+.logo {
+    width: 150px;
+}
+
+.navlinks {
+    list-style: none;
+    padding: 30px 5%; 
+    background-color: rgba(0, 128, 0, 0.89);
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+
+.navlinks li {
+    margin-right: 30px;
+}
+
+.navlinks li a {
+    padding: 5px;
+}
+
+.navlinks li:hover a{
+    background-color: greenyellow;
+    color: black;
+    border-radius: .5rem;
+}
+
+.sec-text {
+    font-size: 30px;
+    color: darkgreen;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.formu {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.formu input {
+    padding: .7rem 2rem;
+    outline: none;
+    border: 2px solid black;
+    font-size: 15px;
+}
+
+.reserv form {
+    max-width: 600px;
+    background-color: lightgreen;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 20px auto;
+}
+
+.boton {
+    background-color: rgb(126, 185, 38);
+    color: white;
+    padding: 10px 20px;
+    border: solid black 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 1rem;
+    display: inline-block;
+    grid-column: span 2; /*Este hace que ocupemos el espacio de dos columnas*/
+}
+
+.boton:hover {
+    background-color: darkgreen;
+}
+
+.foot {
+    background-image: url(imagenes/tacosPro.jpg);
+    background-position: center center; /*Con este definimos la posición de la imagen de fondo que tenemos dentro del div, 
+    center center estamos diciendo que la imagen estará centrada horizontalmente y verticalmente también.*/
+    background-size: cover; /*Con cover estamso diciendo que la imagen cubrirá todo el área de nuestro contenedor.*/
+    background-repeat: no-repeat; /*Con no-repeat aseguramos que la imagen sólo se muestre una vez no múltiples veces.*/
+}
+
+.foot-cont {
+    margin-top: 2rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.foot-cont p {
+   margin-left: 1rem;
+   text-align: justify;
+   font-weight: bold;
+   color: white;
+   line-height: 1.75rem;
+}
+
+.foot-txt h3{
+    background-color: rgba(192, 243, 192, 0.541);
+    padding: 25px;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+.foot-link {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+}
+
+.foot-link li {
+    margin-right: 1rem;
+    display: flex; /*Lo de abajo es posible gracias display:flex */
+    gap: 1rem;
+    font-weight: bold;
+    color: white;
+    justify-content: flex-end; /*Acomodamos los elementos al final del contenedor o sea hacia la derecha.*/
+}
+
+.foot-redes {
+    margin-top: 1rem;
+    margin-right: 1rem;
+    justify-content: flex-end;
+    display: flex;
+    gap: 1rem;
+}
+
+.foot-redes a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.foot-redes a:hover {
+    color: rgb(45, 182, 45);
+}
+
+.foot-ult {
+    padding: 1rem;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+}

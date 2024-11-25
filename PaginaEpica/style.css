@@ -1,0 +1,476 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.navLogo {
+    position: absolute;
+    top: -30px;
+    left: 90px;
+    z-index: 2;
+}
+
+.logo {
+    width: 150px;
+}
+
+.navlinks {
+    list-style: none;
+    padding: 30px 5%; 
+    background-color: rgba(0, 128, 0, 0.89);
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+
+.navlinks a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navlinks li {
+    margin-right: 30px;
+}
+
+.navlinks li a {
+    padding: 5px;
+}
+
+.navlinks li:hover a{
+    background-color: greenyellow;
+    color: black;
+    border-radius: .5rem;
+}
+
+.encab-caja {
+    display: grid;
+    gap: 2rem;
+    overflow: hidden;
+    padding-bottom: 90px; /*PARA SEPARAR DEL CONTENIDO DE INICIO*/
+}
+
+.imgEn img {
+   height: 130%;
+   margin: 10px 55%;
+   display: block; /*Se alinea de manera vertical, ocupa todo el ancho.*/
+}
+
+.imgEn .pre {
+    position: absolute;
+    height: 30%;
+    top: 60%;
+    left: -90px;
+    z-index: 2;
+}
+
+.encabCont h2 {
+    position: relative;
+    left: 1.5em;
+    bottom: .5em;
+    font-size: 90px;
+    font-weight: bold;
+    font-family: "Ubuntu", sans-serif;
+    margin-top: -15rem;
+}
+
+.encabCont p {
+    position: relative;
+    left: 5em;
+    bottom: 2em;
+}
+
+.encabCont p span {
+    color: red;
+    font-weight: bold;
+    border-bottom: dashed;
+}
+
+/*Para aplicarle animación a las imagenes y texto*/
+@keyframes anima { /*Con esta podemos especificar una animación que puede aplciarse a elementos, en este caso
+    lo queremos hacer a las imágenes del inicio.*/
+    0% {
+        transform: translateX(100%); /*El elemento se desplaza fuera de la pantalla hacia la derecha en 0%, esto
+        para que cuando se refresque la pantalla aparezca con el tiempo que se definió abajo.*/
+        opacity: 0; /*Lo volvemos invisible*/
+    }
+    100% {
+        transform: translateX(0); /*Aquí el elemento hacemos que vuelva a su posición original.*/
+        opacity: 1; /*Ahora lo vemos*/
+    }
+}
+
+@keyframes animaIzq {
+    0% {
+        transform: translateX(-100%); /*Pasa lo mismo que el anterior sólo que ahora de lado derechom se encuentra en negativo 
+        el valor porque ahora nos estamos moviendo a la izquierda.*/
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/*Elementos a los que le agregaremos las animaciones que creamos anteriormente.*/
+.imgEn img {
+    animation: anima 1s ease-out 0.1s forwards; /*Basicamente aquí se aplica la función de "anima" 
+    que durará 1 segundo, ease-out quiere decir que empieza rápido y desacelera al final, el 0.1s es un retraso antes de que empiece la animación
+     y forwards es que una vez que termina la animación el estado final se quede ahí y así lo vemos en su posición original.*/
+}
+
+.encabCont h2 {
+    animation: animaIzq 1s ease-out 0.5s forwards;
+}
+
+.encabCont p {
+    animation: animaIzq 1s ease-out 0.5s forwards;
+}
+
+.ban-caja {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin: 10px 10%;
+}
+
+.ban-carta {
+    padding: 1rem;
+    background-position: center;
+    background-size: 100%;  
+    width: 400px;
+    height: 400px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.ban-carta p {
+    margin-bottom: 220px;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+}
+
+.ban-carta h4 {
+    margin-top: 50px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/*Estos son selectores de una pseudo-clase llamados :nth-child() aquí estamos aplicando las imágenes de fondo
+ especificas para los primeros 3 elementos que tienen la clase ban-carta cada uno tendrá una imagen diferente 
+ (que es lo que queremos) y se van a mostrar dependiendo de la posición del contenedor.*/
+.ban-carta:nth-child(1) { 
+    background-image: url(imagenes/tacosPastor.jpg); /*Primer elemento*/
+}
+    
+.ban-carta:nth-child(2) {
+    background-image: url(imagenes/aguacate.jpg); /*Segundo elemento*/
+}
+
+.ban-carta:nth-child(3) {
+    background-image: url(imagenes/salsa.jpg); /*Tercer elemento*/
+}
+
+.orden-cont h3{
+    text-align: center;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    background-color: rgba(77, 216, 77, 0.89); 
+    border: 5px double rgba(0, 128, 0, 0.637);
+}
+
+.orden-grid {
+    display: grid;
+    gap: 2rem ;
+    grid-template-columns: repeat(3, 1fr); /*Para que sean las columnas de las imagenes*/
+    padding: 1rem;
+}
+
+.boton {
+    background-color: rgb(126, 185, 38);
+    color: white;
+    padding: 10px 20px;
+    border: solid black 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.boton:hover {
+    background-color: darkgreen;
+}
+
+.sec-encab {
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.sec-cont p {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    color: black;
+}
+
+.orden-carta {
+    padding: 2rem 1rem;
+    text-align: center;
+    transition: 0.3s;
+    border: 4px solid black;
+}
+
+.precio {
+    color: red !important;
+    margin-bottom: 30px !important;
+}
+
+.orden-carta:hover {
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4); /*Para agregarle fondo al elemento, 
+    los números que se declaraon son el desplazamiento de izq y der de 5px y los 30px son el grado de desenfoque de la sombra*/
+}
+
+.orden-carta img {
+    max-width: 250px;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+    filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.3)); /*Este es similar a box-shadow pero la diferencia es que 
+    solo afecta a la imagen o al contenido de un elemento mientras que el anterior se aplica la sombra a al borde del cuadro (contenedor)*/
+}
+
+.orden-carta h4 {
+    margin-bottom: 1rem;
+    font-size: 25px;
+    color: green;
+}
+
+.orden-carta p {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-family: "Ubuntu", sans-serif;
+    line-height: 1.50rem;
+}
+
+.orden-cont .sec-cont {
+    margin-bottom: 1rem;
+}
+
+.orden-cont .sec-descripcion {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 20px;
+}
+
+.eve-cont {
+    display: grid;
+    gap: 2rem;
+    padding: 3rem 4rem;
+    margin: 3rem 4rem;
+    background-color: rgba(169, 240, 169, 0.726);
+    border-radius: 3rem;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: apa 1.5s ease-out forwards;
+}
+
+@keyframes apa {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+
+.eve-desc {
+    text-align: center;
+}
+
+.eve-desc,  .eve-desc .sec-encab2 {
+    text-align: left;
+} 
+
+.eve-desc h3 {
+    font-size: 2rem;
+    color: darkgreen;
+}
+
+.eve-cont .sec-encab2 {
+    margin-bottom: 1rem;
+}
+
+.eve-cont {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.eve-img img{
+    margin-left: 50px;
+}
+
+.sec-descripcion2 {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#precio2 {
+    font-family:  "Ubuntu", sans-serif;
+    color: red;
+    font-weight: bold;
+}
+
+.tit {
+    text-align: center;
+    line-height: 2rem;
+    margin-top: 4rem;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: black;
+    background-color: rgba(77, 216, 77, 0.89); 
+    border: 5px double rgba(0, 128, 0, 0.637);
+}
+
+.preg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.imgT img{
+    position: relative;
+    top: 40px;
+}
+
+.preg h3 {
+    margin-bottom: 1rem;
+    font-size: 25px;
+}
+
+.preg p {
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+
+.tableP h3, .tableP p {
+    position: relative;
+    top: -70px;
+}
+
+.tableP {
+    padding-right: 2rem;
+    margin: 3rem;
+}
+
+.tableP table {
+    margin-top: -50px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px 15px;
+    border: 5px solid darkgreen;
+}
+
+th {
+    text-align: left;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 20px;
+}
+
+.foot {
+    background-image: url(imagenes/tacosPro.jpg);
+    background-position: center center; /*Con este definimos la posición de la imagen de fondo que tenemos dentro del div, 
+    center center estamos diciendo que la imagen estará centrada horizontalmente y verticalmente también.*/
+    background-size: cover; /*Con cover estamso diciendo que la imagen cubrirá todo el área de nuestro contenedor.*/
+    background-repeat: no-repeat; /*Con no-repeat aseguramos que la imagen sólo se muestre una vez no múltiples veces.*/
+}
+
+.foot-cont {
+    margin-top: 2rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.foot-cont p {
+   margin-left: 1rem;
+   text-align: justify;
+   font-weight: bold;
+   color: white;
+   line-height: 1.75rem;
+}
+
+.foot-txt h3{
+    background-color: rgba(192, 243, 192, 0.541);
+    padding: 25px;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+.foot-link {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+}
+
+.foot-link li {
+    margin-right: 1rem;
+    display: flex; /*Lo de abajo es posible gracias display:flex */
+    gap: 1rem;
+    font-weight: bold;
+    color: white;
+    justify-content: flex-end; /*Acomodamos los elementos al final del contenedor o sea hacia la derecha.*/
+}
+
+.foot-redes {
+    margin-top: 1rem;
+    margin-right: 1rem;
+    justify-content: flex-end;
+    display: flex;
+    gap: 1rem;
+}
+
+.foot-redes a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.foot-redes a:hover {
+    color: rgb(45, 182, 45);
+}
+
+.foot-ult {
+    padding: 1rem;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+}

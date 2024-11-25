@@ -1,0 +1,310 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.navLogo {
+    position: absolute;
+    top: -30px;
+    left: 90px;
+    z-index: 2;
+}
+
+.logo {
+    width: 150px;
+}
+
+.navlinks {
+    list-style: none;
+    padding: 30px 5%; 
+    background-color: rgba(0, 128, 0, 0.89);
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+
+.navlinks a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navlinks li {
+    margin-right: 30px;
+}
+
+.navlinks li a {
+    padding: 5px;
+}
+
+.navlinks li:hover a{
+    background-color: greenyellow;
+    color: black;
+    border-radius: .5rem;
+}
+
+/*Diseño del formulario*/
+
+.sec-text {
+    font-size: 30px;
+    color: darkgreen;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.formu {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns:  auto 1fr;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.formu label {
+    text-align: left;
+    padding-right: 1rem;
+    margin: 0;
+    color: black;
+    font-weight: bold;
+}
+
+.formu input {
+    padding: .7rem 2rem;
+    outline: none;
+    border: 2px solid black;
+    font-size: 15px;
+}
+
+/*Al poner los campos de input así lo estamos tomando de manera específica
+esto sólo sirve si estos inputs tienen un tipo, es para tener un poco más de control dentro
+del código y estilos.*/
+.formu input[type="text"],
+.formu input[type="number"] {
+    width: 100%;
+    padding: 0.7rem;
+    margin: 0;
+    outline: none;
+    border: 2px solid black;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.formu input[type="button"], 
+.formu button[type="button"] {
+    grid-column: span 2;
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formu input[type="button"]:hover,
+.formu button[type="button"]:hover {
+    background-color: green;
+    color: black;
+}
+
+.reserv form {
+    max-width: 600px;
+    background-color: lightgreen;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 20px auto;
+}
+
+/*Diseño del popup para mostrar los datos*/
+
+.popup-o {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+ 
+
+.popup {
+    background: lightgreen;
+    padding: 20px;
+    border-radius: 5px;
+    width: 500px;
+    text-align: center;
+    box-sizing: border-box;
+    max-width: 90%;
+}
+
+#popup h3 {
+    color: darkgreen;
+    font-weight: bold;
+}
+
+#popup p {
+    font-size: 20px;
+    color: black;
+    text-align: center;
+}
+
+/*Diseño para el botón de confirmar del popup*/
+#enviarPedido {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#popup-o .cancelB {
+    padding: 0.7rem 1.5rem;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: darkred;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#popup-o .cancelB:hover{
+    color: black;
+}
+
+#cerrarPopup {
+    background-color: yellowgreen;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#enviarPedido:hover {
+    color: black;
+}
+
+#cerrarPopup:hover {
+    color: black;
+}
+
+.popup button {
+    margin: 5px;
+}
+
+/*Para los mensajes de error y de confirmación a la hora de enviar los datos al formulario*/
+.success { /*Para mensaje que se envio con exito*/
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    padding: 10px 20px;
+    transform: translate(-50%, -50%);
+    color: black !important;
+    background-color: greenyellow !important;
+    border: dashed;
+    font-size: 25px;
+    font-weight: bold;
+    z-index: 10000;
+}
+
+.error { /*Para mensaje de "error" de que no se envió nada*/
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.foot {
+    margin-top: 40px;
+    background-image: url(imagenes/tacosPro.jpg);
+    background-position: center center; /*Con este definimos la posición de la imagen de fondo que tenemos dentro del div, 
+    center center estamos diciendo que la imagen estará centrada horizontalmente y verticalmente también.*/
+    background-size: cover; /*Con cover estamso diciendo que la imagen cubrirá todo el área de nuestro contenedor.*/
+    background-repeat: no-repeat; /*Con no-repeat aseguramos que la imagen sólo se muestre una vez no múltiples veces.*/
+}
+
+.foot-cont {
+    margin-top: 2rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.foot-cont p {
+   margin-left: 1rem;
+   text-align: justify;
+   font-weight: bold;
+   color: white;
+   line-height: 1.75rem;
+}
+
+.foot-txt h3{
+    background-color: rgba(192, 243, 192, 0.541);
+    padding: 25px;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+.foot-link {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+}
+
+.foot-link li {
+    margin-right: 1rem;
+    display: flex; /*Lo de abajo es posible gracias display:flex */
+    gap: 1rem;
+    font-weight: bold;
+    color: white;
+    justify-content: flex-end; /*Acomodamos los elementos al final del contenedor o sea hacia la derecha.*/
+}
+
+.foot-redes {
+    margin-top: 1rem;
+    margin-right: 1rem;
+    justify-content: flex-end;
+    display: flex;
+    gap: 1rem;
+}
+
+.foot-redes a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.foot-redes a:hover {
+    color: rgb(45, 182, 45);
+}
+
+.foot-ult {
+    padding: 1rem;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+}

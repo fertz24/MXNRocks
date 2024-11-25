@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MXN Rocks! | Inicio</title>
+   
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@0;1&display=swap');
+    </style>
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="encab">
+        <nav>
+                <div class="navLogo">
+                    <a href="#"> <img src="imagenes/logoTacos.png" alt="Logo del restaurante" class="logo"> </a>
+                </div>
+            <ul class="navlinks" id="navL">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#contactanos">Contáctanos</a></li>
+                <li><a href="#pregunta">Preguntas frecuentes</a></li>
+                <li><a href="formulario.html">¡Reserva ya!</a></li>
+            </ul>
+        </nav>
+
+        <div class="sec-caja encab-caja">
+            <div class="imgEn">
+                <img src="imagenes/comboTacos.png" alt="Promoción de tacos">
+                <img src="imagenes/precio2.png" alt="Precio de combo" class="pre"> 
+            </div>
+            <div class="encabCont">
+                <h2 class="text-black">¡Taco <br> Tuesday!</h2> <!--AQUÍ SE USA BOOTSTRAP, aquí estamos declarando que con 
+                text-black ponga nuestro encabezado h2 en negro-->
+                <p>Ven y prueba nuestra nueva promoción de tacos de arrachera. <br>
+                    Deliciosa carne con sazón de casa, incluido con agua fresca chica. <br>
+                    <span>*Válido hasta el 31 de Octubre.</span>  
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <section class="sect-caja ban-caja">
+        <div class="ban-carta">
+            <p>Nuestra especialidad...</p>
+            <h4>Tacos al pastor</h4>
+        </div>
+        <div class="ban-carta">
+            <p>¡Nuestros ingredientes son <br></p>
+            <h4>frescos del día!</h4>
+        </div>
+        <div class="ban-carta">
+            <p>Prueba la</p>
+            <h4>Salsa roja</h4>
+        </div>
+    </section>
+
+    <section class="sec-cont orden-cont" id="menu">
+        <h3 class="fs-3"> Menú de MXN Rocks! <br> </h3> 
+        <h2 class="sec-encab fw-bold text-success">Observa y disfruta de unos tacos gourmet</h2> <!--Aquí se usa bootstrap donde usamos un font-weight bold y el texto en verde-->
+        <p class="sec-descripcion">
+        Tenemos una gran variedad de de tacos gourmet
+        ya sea de asada, pollo, pastor, tripa e incluso vegetarianos.
+        <br>Puedes pedirlos con tortilla de maíz y harina. <br> 
+        Deleitate de nuestra gran variedad de salsas rojas y verdes, están para picarse la lengua.
+        </p>
+
+        <!--Los encabezados h4 los pusimos con el elemento de bootstrap fw-bold indicando negrita-->
+        <div class="orden-grid">
+            <div class="orden-carta">
+                <img src="imagenes/tacos1.png" alt="Tacos de carne asada">
+                <h4 class="fw-bold">Tacos de carne asada</h4>
+                <p>Prueba de unos deliciosos tacos de carne asada al carbón 
+                    y deleitate de nuestro sazón, ¡que te encantará! Prepáralos a tu gusto.
+                    <br>
+                </p>
+                <p class="precio">*A sólo $30MXN.</p>
+                <a class="boton" href="#contactanos">Ordena a domicilio</a>
+            </div>
+            <div class="orden-carta">
+                <img src="imagenes/tacogringo.png" alt="Tacos de carne molida">
+                <h4 class="fw-bold">Tacos gringos</h4>
+                <p>Prueba de unos deliciosos tacos gringos de carne molida, delicioso queso cheddar, crema ácida, etc. 
+                    ¿Algo diferente no?
+                    <br>
+                </p>
+                <p class="precio">*A sólo $35MXN.</p>
+                <a href="#contactanos" class="boton">Ordena a domicilio</a>
+            </div>
+            <div class="orden-carta">
+                <img src="imagenes/tacos4-removebg-preview.png" alt="Burrito">
+                <h4 class="fw-bold">Burrito de carne asada estilo food truck</h4>
+                <p>Este burrito de gran sabor, con carne asada (puedes combinar proteína), 
+                    arroz, frijol, pico de gallo y guacamole.
+                    <br>
+                </p>
+                <p class="precio">*A sólo $80MXN.</p>
+                <a href="#contactanos" class="boton">Ordena a domicilio</a>
+            </div>
+            <div class="orden-carta">
+                <img src="imagenes/carneAsadaFries.png" alt="Papas preparadas">
+                <h4 class="fw-bold">Carne asada fries</h4>
+                <p>Deliciosas papas fritas con queso cheddar, carne arrachera, pico de gallo, guacamole,
+                    y crema ácida. ¡What a munchie!
+                    <br>
+                </p>
+                <p class="precio">*A sólo $80MXN.</p>
+                <a href="#contactanos" class="boton">Ordena a domicilio</a>
+            </div>
+            <div class="orden-carta">
+                <img src="imagenes/tacosVegetarianos.png" alt="Tacos vegetarianos">
+                <h4 class="fw-bold">Tacos vegetarianos</h4>
+                <p>Prueba de unos deliciosos tacos veganos a base de "carne de vegetales"
+                    con vegetales asados (puedes incluir tofu).
+                    <br>
+                </p>
+                <p class="precio">*A sólo $45MXN.</p>
+                <a href="#contactanos" class="boton">Ordena a domicilio</a>
+            </div>
+            <div class="orden-carta">
+                <img src="imagenes/tacos3.png" alt="Tacos de carne asada">
+                <h4 class="fw-bold">Tacos de carne asada con pan pita</h4>
+                <p>¿Qúe tal pan pita?
+                    Elaborado con los mejores ingredientes (importados), recuerda que puedes poner la proteína que desees. 
+                    <br>
+                </p>
+                <p class="precio">*A sólo $95MXN.</p>
+                <a href="#contactanos" class="boton">Ordena a domicilio</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec-con2 eve-caja" id="ev">
+        <div class="eve-cont">
+            <div class="eve-img">
+                <img src="imagenes/choco.png" alt="Pastel de chocolate">
+            </div>
+            <div class="eve-desc">
+                <h3 class="fw-bold">Porque la vida es más dulce con...</h3> <!--Aquí se usó una de las propiedades de bootstrap, font-weight bold-->
+                <h2 class="sec-encab2 fw-bold text-black">¡Pastel de chocolate!</h2> <!--Aquí tambien pero agregándole el texto de color negro con text-black-->
+                <p class="sec-descripcion2">Delicioso pastel de chocolate elaborado con Hersheys, 
+                pan esponjoso de chocolate con betún de queso crema con cacao mexicano. <br>
+                <br>Agrégale un scoop de nieve de vainilla si así lo deseas, ¡Completamente gratis!
+                <br>
+                Puedes pedir el pastel completo.</p>
+                <p id="precio2"> <br> *A sólo $45MXN la rebanada. <br>
+                    *A sólo $200MXN el pastel completo.</p>
+            </div>
+        </div>
+    </section>
+
+<h2 class="tit">¡Hey!, estamos aquí para ayudarte.</h2>
+
+    <section class="preg" id="pregunta">
+        <div class="tableP">
+            <h3 class="fw-bold text-black">Preguntas frecuentes</h3>  <!--Aquí se utilizó font bold y el texto de color negro.-->
+              <p class="text-black">MXN Rocks! Nos preocupamos por nuestros clientes, aquí te proporcionamos información de ayuda.</p>     
+        <table>
+            <thead>
+                <tr>
+                    <th>Pregunta</th> <!--Se utiliza para definir una celda de encabezado dentro de una fila-->
+                    <th>Respuesta</th>
+                </tr>
+            </thead>
+            <tbody>
+                     <tr>
+                    <th>¿Puedo hacer una reservación?</th>
+                    <th>¡Si!. Lo puedes hacer aquí en nuestra página en el menú de inicio, botón de reserva ya.</th>
+                    
+                </tr>
+                <tr>
+                    <th>¿Hay pedidos a domicilio?</th>
+                    <th>¡Si!. Puedes llamarnos al (686)-123-456</th>
+                </tr>
+                <tr>
+                    <th>¿Hay pagos en efectivo?</th>
+                    <th>Así es. E igual tenemos pagos con tarjetas de crédito y débito.</th>
+                </tr> 
+            </tbody>
+        </table>
+    </div>
+        <div class="imgT">
+            <img src="imagenes/logoTacos.png" alt="LogoTacos">
+        </div>  
+    </section>
+
+    <footer class="foot" id="contactanos">
+        <div class="sec-f foot-caja">
+            <div class="foot-txt">
+              <h3 class="fw-bold">Contáctanos</h3> <!--Aquí se utilizó bootstrap donde pusimos la letra en negrita con font-weight: bold-->
+            </div>
+            <div class="foot-cont">
+                <p>¡Bienvenido(a) a MXN Rocks! Somos un restaurante de tacos gourmet en Mexicali, B.C. Establecidos en 2024.
+                    Creemos que los tacos es algo que nos representa como mexicanos y es por eso que le quisimos dar un toque
+                    diferente a los que estamos acostumbrados, <br>Esperemos que la comida sea de tu agrado y nos a compañes en nuestras instalaciones
+                    siempre serás bienvenido(a). <br>
+                    Gracias por visitar esta página, fue creada con bastante esfuerzo. <br>
+                </p>
+                <div>
+                    <ul class="foot-link">
+                        <li>
+                            <span><i class="ri-map-pin-2-fill"></i></span>
+                            Avenida Tecnológico s/n, Colonia Elías Calles, 21376 Mexicali, B.C.
+                        </li>
+                        <li>
+                            <span><i class="ri-time-line"></i></span>
+                            Lunes a Viernes de 12:00pm a 11:00pm / Sábado y Domingo cerrado
+                        </li>
+                        <li>
+                            <span><i class="ri-phone-fill"></i></span>
+                            (686)-123-456
+                        </li>
+                    </ul>
+                    <div class="foot-redes">
+                        <a href="https://www.facebook.com/?locale=es_LA"><i class="ri-facebook-circle-fill"></i></a>
+                        <a href="https://www.instagram.com/?hl=es"><i class="ri-instagram-fill"></i></a>
+                        <a href="https://x.com/?lang=es"><i class="ri-twitter-x-fill"></i></a>
+                        <a href="https://web.whatsapp.com/"><i class="ri-whatsapp-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot-ult">
+            Copyright &copy 2024 MXN Rocks!. Todos los derechos reservados.
+            <p id="visitas"></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="visitas.js"></script>
+</body>
+</html>
